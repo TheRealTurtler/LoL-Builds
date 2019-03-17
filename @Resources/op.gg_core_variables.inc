@@ -13,3 +13,5 @@ ChampionIconSize=52
 YItem=17
 YRune=77
 CurrentlyLoading=1
+YFragment=96
+FragmentSize=21

@@ -41,7 +41,7 @@ Measure=WebParser
 UpdateRate=-1
 DynamicVariables=1
 URL=http://euw.op.gg/champion/#Champion#/statistics/#Lane#
-RegExp=(?siU)<li class="champion-stats-header__position.*data-position="(.*)">.*<div class="champion-stats-header-info__image">.*<img src="//(.*)".*>.*Recommended Skill Builds.*<li class="champion-stats__list__item tip".*<span>(.*)</span>.*<li class="champion-stats__list__item tip".*<span>(.*)</span>.*<li class="champion-stats__list__item tip".*<span>(.*)</span>.*Recommended Builds.*<li class="champion-stats__list__item tip".*<img src="//(.*)".*>.*<li class="champion-stats__list__item tip".*<img src="//(.*)".*>.*<li class="champion-stats__list__item tip".*<img src="//(.*)".*>.*<strong>(.*)</strong>.*<span>(.*)</span>.*Boots.*<li class="champion-stats__list__item tip".*<img src="//(.*)".*>.*<div class="perk-page__item perk-page__item--keystone perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item  perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item  perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item  perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item perk-page__item--mark">.*<img src="//(.*)".*>.*<div class="perk-page__item perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item perk-page__item--active">.*<img src="//(.*)".*>
+RegExp=(?siU)<li class="champion-stats-header__position.*data-position="(.*)">.*<div class="champion-stats-header-info__image">.*<img src="//(.*)".*>.*Recommended Skill Builds.*<li class="champion-stats__list__item tip".*<span>(.*)</span>.*<li class="champion-stats__list__item tip".*<span>(.*)</span>.*<li class="champion-stats__list__item tip".*<span>(.*)</span>.*Recommended Builds.*<li class="champion-stats__list__item tip".*<img src="//(.*)".*>.*<li class="champion-stats__list__item tip".*<img src="//(.*)".*>.*<li class="champion-stats__list__item tip".*<img src="//(.*)".*>.*<strong>(.*)</strong>.*<span>(.*)</span>.*Boots.*<li class="champion-stats__list__item tip".*<img src="//(.*)".*>.*<div class="perk-page__item perk-page__item--keystone perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item  perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item  perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item  perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item perk-page__item--mark">.*<img src="//(.*)".*>.*<div class="perk-page__item perk-page__item--active">.*<img src="//(.*)".*>.*<div class="perk-page__item perk-page__item--active">.*<img src="//(.*)".*>.*<div class="fragment-page">.*<img src="//(opgg-static.akamaized.net/images/lol/perkShard/[A-Z0-9]*\.png)".*<img src="//(opgg-static.akamaized.net/images/lol/perkShard/[A-Z0-9]*\.png)".*<img src="//(opgg-static.akamaized.net/images/lol/perkShard/[A-Z0-9]*\.png)"
 OnRegExpErrorAction=[!ShowMeter MeterRegExpError][!SetVariable CurrentlyLoading -1]
 FinishAction=[!HideMeter MeterRegExpError][!SetVariable CurrentlyLoading -1]
 
@@ -143,6 +143,27 @@ URL=http://[MeasureBuild]
 StringIndex=15
 Download=1
 DownloadFile=Rune3.png
+
+[MeasureFragment1]
+Measure=WebParser
+URL=http://[MeasureBuild]
+StringIndex=19
+Download=1
+DownloadFile=Fragment1.png
+
+[MeasureFragment2]
+Measure=WebParser
+URL=http://[MeasureBuild]
+StringIndex=20
+Download=1
+DownloadFile=Fragment2.png
+
+[MeasureFragment3]
+Measure=WebParser
+URL=http://[MeasureBuild]
+StringIndex=21
+Download=1
+DownloadFile=Fragment3.png
 
 [MeasureLoadingFrame]
 Measure=Calc
